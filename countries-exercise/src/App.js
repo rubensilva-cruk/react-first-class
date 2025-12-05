@@ -1,8 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
-  return <div></div>;
+  return (
+    <div className="app-container">
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
