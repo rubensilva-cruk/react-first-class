@@ -1,0 +1,74 @@
+/* CardInfo.css */
+
+.country-info {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.country-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.country-info img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.country-info h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.country-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.currency-section,
+.language-section {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.currency-section h4,
+.language-section h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.currency-section ul,
+.language-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.currency-section li,
+.language-section li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.currency-section strong,
+.language-section strong {
+  color: #333;
+}
