@@ -15,9 +15,6 @@ function Card({ heading, country, assignCategory, selectCountry }) {
   }, [selectedCategory]);
 
   useEffect(() => {
-    console.log('im on conutry use effect  ahhaha');
-
-    console.log('im on conutry use effect');
     setSelectedCountry(country);
   }, [country]);
 
@@ -56,3 +53,9 @@ function Card({ heading, country, assignCategory, selectCountry }) {
 }
 
 export default Card;
+
+// structure comes on the exercise: dropdown - cardinfo - selector
+// they should discuss the logic and how thing will communicate
+// will come empty only with the div card-box and maybe the image class
+// main div shoulbe be className="card-body flex-center"
+// image should be className="card-img"
