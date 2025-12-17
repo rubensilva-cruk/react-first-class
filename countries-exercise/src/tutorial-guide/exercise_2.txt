@@ -1,0 +1,28 @@
+Exercise 1 — Plan the Card Component
+
+Assignment:
+Before writing code, plan your Card component for the Country Selector App. Focus on functionality, structure, and data management.
+
+Tasks
+
+1. Plan the Card Structure
+    -Include a heading for the category.
+    -Add a country info area to display the flag, name, region, population, currencies, and languages.
+    -For the Select Card, include dropdowns for selecting a country and a category.
+    -Define how the card will show a placeholder if no country is selected.
+
+2. Define the Card’s Functionality
+    -The card should display a country for a given category.
+    -When a country is selected in the Select Card, it should be possible to assign it to a category.
+    -The card must communicate changes back to the parent component (Body) to update the state.
+
+3. Determine the Data the Card Needs
+    -Decide which data comes from the parent (props) and which data is managed internally (state).
+    -Identify the fields required for displaying country information.
+    -Define how the card will track the selected country and category for communication with the parent.
+
+Plan the JSX Structure:
+    -Heading — display the category name
+    -Country Dropdown — only for the Select Card
+    -Card Info / Placeholder — code already exists
+    -Category Selector Dropdown — code already exists

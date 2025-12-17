@@ -1,0 +1,94 @@
+
+React Exercise — Country Selector App
+====================================
+
+Assignment Description
+----------------------
+
+You will build a React application that allows the user to select countries and assign them to different categories.
+The app will be composed of multiple components and will require the use of useState, props, state lifting, useEffect, and component communication.
+
+Before implementing the logic, you should first build the structure of the app.
+
+App Structure Requirements
+--------------------------
+
+1. Layout
+
+The main component (Body) should be structured as:
+
+- Header — contains the app title or description
+- Body — contains the main cards and selection functionality
+- Footer — optional, for additional info or credits
+
+2. Cards
+
+The application must display 4 cards:
+
+### Category Cards (3)
+
+Each card represents a category:
+
+- Favorite Country
+- Origin Country
+- Dream Destination
+
+Each card should display the currently assigned country for its category.
+
+### Select Country Card (1)
+
+- Allows the user to select a country and a category to assign it to
+- Communicates with the main component to update the correct category
+
+### Card Content
+
+Each card should contain:
+
+- Heading — the category name
+- Country info — flag, name, region, population, currencies, languages
+- Dropdown — to select countries (only for the "Select Country" card)
+- Category selector — a dropdown with a button to assign the selected country to a category
+
+3. Country History List
+
+- A HistoryList component must be included to store all previously selected countries
+- Displays countries in the order they were selected
+- Updates every time a new country is assigned, regardless of category
+
+API for Country Data
+--------------------
+
+Use the REST Countries API to fetch country data:
+
+  fetch(
+    'https://restcountries.com/v3.1/all?fields=name,cca3,flags,region,population,currencies,languages'
+  )
+    .then(res => res.json())
+    .then(data => {
+      if (!Array.isArray(data)) return;
+
+      const list = data
+        .map(c => ({
+          code: c.cca3,
+          name: c.name.common,
+          flags: c.flags,
+          region: c.region,
+          population: c.population,
+          currencies: c.currencies,
+          languages: c.languages,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+      console.log("I'm fecthing the countries");
+      setCountriesList(list);
+    })
+    .catch(err => console.error(err));
+
+
+Each country object should include:
+
+- flags — for displaying the flag
+- name — country name
+- region — continent/region
+- population
+- currencies — list of currencies
+- languages — list of languages

@@ -1,0 +1,32 @@
+Exercise 2 — Build the CountryDropdown Component
+Objective
+    - Create a CountryDropdown component that fetches country data and allows the user to select a country. 
+    - This will teach you about data fetching with useEffect, state management, and communicating selections to a parent component.
+
+Instructions
+
+
+1. Fetch country data:
+    - Use the REST Countries API:
+        https://restcountries.com/v3.1/all?fields=name,cca3,flags,region,population,currencies,languages
+
+    -Use useEffect to fetch the data only once when the component mounts.
+    -Transform the API data into a format suitable for your dropdown (code, name, flags, region, population, currencies, languages).
+    -Sort the country list alphabetically by name.
+    -Think about why useEffect is necessary here.
+  Hint: Without useEffect, your fetch might run every render, causing infinite loops.
+
+2. Set up component state:
+    -countriesList to store the list of countries fetched from the API.
+    -selectedCountry to track the country currently selected by the user.
+3. Render the dropdown:
+    - Display a <select> element with <option>s for all countries.
+    - Show the currently selected country or a placeholder (“Select a country...”).
+
+4. Handle user selection:
+    - When a country is selected, update selectedCountry in state.
+    - Call the handleSelect function passed from the parent to notify it about the selection.
+
+Deliverable
+    - A CountryDropdown component that fetches country data, displays a dropdown, and communicates the selected country to the parent.
+    - Include CSS to make the dropdown readable and visually clear.
