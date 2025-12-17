@@ -17,6 +17,7 @@ export default function DropdownSelector({ setSelectedCategory }) {
     }
     const selectedCategory = categories.find(cat => cat.id === selectedId);
     setCategory(selectedCategory);
+    setSelectedCategory(null);
   };
 
   const handleSave = e => {
@@ -42,3 +43,5 @@ export default function DropdownSelector({ setSelectedCategory }) {
     </div>
   );
 }
+
+// can be delivered ready
