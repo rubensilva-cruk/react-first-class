@@ -32,7 +32,6 @@ export default function CardInfo({ country }) {
         )}
       </div>
 
-      {/* Language Information */}
       <div className="language-section">
         <h4>Languages:</h4>
         {country.languages ? (
@@ -50,3 +49,5 @@ export default function CardInfo({ country }) {
     </div>
   );
 }
+
+// stays ready
