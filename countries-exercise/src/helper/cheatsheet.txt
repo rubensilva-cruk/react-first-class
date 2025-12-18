@@ -1,0 +1,54 @@
+React Project Setup Cheat Sheet
+
+# Clone the repository
+git clone https://github.com/rubensilva-cruk/react-first-class.git
+
+# Navigate into the project folder
+cd react-first-class
+
+# Switch to the correct branch
+git checkout learning/react1.0
+
+# If the branch does not exist locally yet, run:
+git fetch
+git checkout learning/react1.0
+
+Install dependencies
+
+# Using npm:
+npm install
+
+# Or using yarn (if applicable):
+yarn
+
+# Start the project
+
+# Using npm:
+npm start
+
+# Using yarn:
+yarn start
+
+# Useful Git commands
+
+# Check the current branch:
+git branch
+
+# Check the repository status:
+git status
+
+# Pull the latest changes from the current branch:
+git pull
+
+# Workflow summary:
+Clone the repository → switch to the correct branch → install dependencies → start the project.
+
+# Conditional Rendering
+          <>
+            <img
+              src="https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg"
+              alt="placeholder"
+              className="card-img"
+            />
+            <h2>Select a country</h2>
+          </>
